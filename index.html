@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<main class="main">
+			<form method="post" class="form" id="form">
+				<h1>Анкета</h1>
+				<div class="form__item">
+					<label class="form__label" for="name">Имя*:</label>
+					<input class="form__input _req" type="text" name="name" id="name" value="">
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="phone">Телефон*:</label>
+					<input class="form__input _req" type="tel" id="phone" name="phone" value="">
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="desc">О себе:</label>
+					<textarea class="form__input" name="desc" id="desc" rows="8" cols="80"></textarea>
+				</div>
+				<div class="form__item">
+					<div class="heading-radio">
+						Есть ли вам 18?
+					</div>
+					<div class="radio">
+						<input type="radio" id="radio1" checked name="age" value="">
+						<label for="radio1" class="radio__label"><span>Да</span></label>
+					</div>
+					<div class="radio">
+						<input type="radio" id="radio2" name="age" value="">
+						<label for="radio2" class="radio__label"><span>Нет</span></label>
+					</div>
+				</div>
+				<div class="form__item checkbox">
+					<input checked class="checkbox__input _req" type="checkbox" id="checkbox" name="agreement" value="">
+					<label for="checkbox" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">условиями</a>*</span></label>
+				</div>
+				<div class="form__item">
+					<button type="submit" name="button">Отправить</button>
+				</div>
+			</form>
+		</main>
+		<div class="popap" id="popap-false">
+			<div class="popap__body">
+				<div class="popap__text">Заполните необходимые поля</div>
+				<div class="popap__button">Ок</div>
+			</div>
+		</div>
+		<div class="popap" id="popap-true">
+			<div class="popap__body">
+				<div class="popap__text">Форма отправлена, спасибо!</div>
+				<div class="popap__button">Ок</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
